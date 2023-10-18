@@ -1,0 +1,74 @@
+.calc{
+    margin: 10% auto;
+    width: 330px;
+    height: 500px;
+    background-color: black;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #fff;
+    padding: 18px;
+}
+
+.calc-screen{
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+}
+
+.calc-screen p{
+    text-align: right;
+    font-size: 40px;
+    margin: 0;
+}
+
+.buttons{
+    /* Превращение родительского элемента в грид-контейнер */
+    display: grid;
+    /* Определяет шаблон сетки ссылаясь на имена областей */
+    grid-template-areas:
+    "ac plus-minus percent division"
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+
+    /* Размер отступа, разделяющего линии сетки */
+    grid-gap: 8px;
+    justify-items: center;
+}
+
+.btn{
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn.zero{
+    grid-area: zero;
+    width: 100%;
+    border-radius: 35px;
+}
+
+.btn:hover{
+    filter:brightness(120%)
+}
+
+.btn:active{
+    filter:brightness(90%);
+}
+
+.btn.bg-gray{
+    background-color:#a6a6a6 ;
+}
+
+.btn.bg-orange{
+    background-color: #ff9501;
+}
